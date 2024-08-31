@@ -1,13 +1,13 @@
 import { useState } from "react"
  
-//functional component
+//Functional component
 export const GifApp = () => {
  
     //hook = useState = renderizar un componente cuando haya un cambio en su valor
     const [categorias, setCategorias] = useState([])
  
     const reqCategorias = async() => {
-        await fetch(`http://localhost:8080/categorias`).then((resp)=> {
+        await fetch(`http://localhost:8085/categorias`).then((resp)=> {
             resp.json().then((data)=>{
                 setCategorias(data)
             })
